@@ -60,18 +60,34 @@
 
   // SERIES OF STEPS TO EXECUTE
   // create a new array of filtered items based on price
-
-
+  // map to a new array that only includes title
+  // split and join into one long string
+  // make it show up on the page (querySel#, createTextNode, appendChild)
 
 
   // create a new array of filtered items based on price
   var itemsInRange = items.filter(function(item) {
-    return item.price >= 10 && item.price <= 14;
+    return item.price > 14 && item.price < 18;
   });
-  console.log(itemsInRange);
+  // console.log(itemsInRange);
 
 
+  // map to a new array that only includes title
+  var titles = itemsInRange.map(function(item){
+    return item.title;
+  });
+  // console.log(titles);
+  
 
+  // split and join into one long string
+  var str = '' + titles + '';
+  var stringOfThree = str.split(',').join(' ');
+  // console.log(stringOfThree);
+
+  // make it show up on the page (querySel#, createTextNode, appendChild)
+  var answer2 = document.querySelector('#answer2');
+  var textNode = document.createTextNode(stringOfThree);
+  answer2.appendChild(textNode);
 
 
 
