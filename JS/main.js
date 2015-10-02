@@ -173,8 +173,14 @@ console.log("Which items are made of eight or more materials? Display the name, 
   console.log(eightMaterialList);
 
   // convert this new array into a string of text
-  var str = '' + eightMaterialList;
-  console.log(str);
+  var str = eightMaterialList + '';
+  var stringOfEightMaterialItems = str.split(',').join(' ');
+  console.log(stringOfEightMaterialItems);
+
+  // make it show up on the page (querySel#, createTextNode, appendChild)
+  var answer5 = document.querySelector('#answer5');
+  var textNode = document.createTextNode(stringOfEightMaterialItems);
+  answer5.appendChild(textNode);
 
 
 })();
