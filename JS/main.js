@@ -10,6 +10,11 @@
   // create variables, give them a value and pass them along to the next step
 
 
+
+
+
+
+
 // QUESTION #1 CALC THE AVG PRICE
 
   // SERIES OF STEPS TO EXECUTE
@@ -56,6 +61,15 @@
   var textNode = document.createTextNode(str);
   answer1.appendChild(textNode);
 
+
+
+
+
+
+
+
+
+
 // QUESTION #2 SHOW ITEMS IN A PRICE RANGE (14-18)
 
   // SERIES OF STEPS TO EXECUTE
@@ -88,6 +102,12 @@
   var answer2 = document.querySelector('#answer2');
   var textNode = document.createTextNode(stringOfThree);
   answer2.appendChild(textNode);
+
+
+
+
+
+
 
 
 // QUESTION #3 SHOW ITEM WITH BRITISH POUND CURRENCY CHARACTER
@@ -126,6 +146,11 @@
   answer3.appendChild(textNode);
 
 
+
+
+
+
+
 // QUESTION #4 SHOW ALL ITEMS MADE OF WOOD
 
   // lesson learned - filte is return then a statement that if true, keeps the item
@@ -156,31 +181,69 @@
   answer4.appendChild(textNode);
 
 
+
+
+
+
 // QUESTION #5 SHOW ALL ITEMS MADE OF WOOD
 
-console.log("Which items are made of eight or more materials? Display the name, number of items and the items it is made of.");
+// console.log("Which items are made of eight or more materials? Display the name, number of items and the items it is made of.");
 
   // filter for iteam made of eight or more materials
   var eightMaterialItems = items.filter(function (item) {
     return item.materials.length >7;
   });
-  console.log(eightMaterialItems);
+  // console.log(eightMaterialItems);
 
   // map to a new array that is only name, number of items and items included
   var eightMaterialList = eightMaterialItems.map (function (item) {
     return item.title + ' ' + item.materials.length + ' ' + item.materials;
   });
-  console.log(eightMaterialList);
+  // console.log(eightMaterialList);
 
   // convert this new array into a string of text
   var str = eightMaterialList + '';
   var stringOfEightMaterialItems = str.split(',').join(' ');
-  console.log(stringOfEightMaterialItems);
+  // console.log(stringOfEightMaterialItems);
 
   // make it show up on the page (querySel#, createTextNode, appendChild)
   var answer5 = document.querySelector('#answer5');
   var textNode = document.createTextNode(stringOfEightMaterialItems);
   answer5.appendChild(textNode);
+
+
+
+
+
+
+
+
+// QUESTION #6 SHOW ALL ITEMS MADE OF WOOD
+// go back and figure out more systematic way to find collective
+
+console.log("Answer: 18 were made by their sellers");
+
+// filter for an array of items made by seller 
+// who_made = i_did
+
+var selfMadeItems = items.filter(function(item) {
+  return item.who_made != "someone_else" && item.who_made != "collective";
+});
+console.log(selfMadeItems);
+console.log(selfMadeItems.length);
+
+// display as a phrase
+var str= selfMadeItems.length + ' were made by their sellers';
+console.log(str);
+
+// make it show up on the page (querySel#, createTextNode, appendChild)
+  var answer6 = document.querySelector('#answer6');
+  var textNode = document.createTextNode(str);
+  answer6.appendChild(textNode);
+
+
+
+
 
 
 })();
