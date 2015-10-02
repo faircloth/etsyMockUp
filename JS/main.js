@@ -90,5 +90,45 @@
   answer2.appendChild(textNode);
 
 
+// QUESTION #3 SHOW ITEM WITH BRITISH POUND CURRENCY CHARACTER
+
+  // SERIES OF STEPS TO EXECUTE
+  // filter for items with a currency code equal to British pound
+  // treat it like an array bc it is - make new array (map) with title only
+  // convert into a string of text
+  // make it show up on the page (querySel#, createTextNode, appendChild)
+
+
+  // filter for items with a currency code equal to British pound
+  var poundItems = items.filter(function(item) {
+    return item.currency_code != "USD";
+  });
+  console.log(poundItems);
+
+
+  // treat it like an array bc it is - make new array (map) with title only
+  var poundItem = poundItems.map(function(item) {
+    return item.title;
+  });
+  // console.log(poundItem);
+
+  
+// COME BACK TO THIS FOR THE BRITISH POUND SITUATION
+
+  // convert into a string of text
+  var str = '' + poundItem + ' costs 18';
+  // console.log(str);
+
+
+  // make it show up on the page (querySel#, createTextNode, appendChild)
+  var answer3 = document.querySelector('#answer3');
+  var textNode = document.createTextNode(str);
+  answer3.appendChild(textNode);
+
+
+// QUESTION #4 SHOW ALL ITEMS MADE OF WOOD
+
+
+
 
 })();
