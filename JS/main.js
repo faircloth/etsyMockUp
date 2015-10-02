@@ -135,8 +135,12 @@
   
 // COME BACK TO THIS FOR THE BRITISH POUND SITUATION
 
+  var poundSign = document.write('&#163');
+  // console.log(poundSign);
+  // console.log('&#163');
+
   // convert into a string of text
-  var str = '' + poundItem + ' costs 18';
+  var str = '' + poundItem + ' costs ' + poundSign + ' 18';
   // console.log(str);
 
 
@@ -221,7 +225,7 @@
 // QUESTION #6 SHOW ALL ITEMS MADE OF WOOD
 // go back and figure out more systematic way to find collective
 
-console.log("Answer: 18 were made by their sellers");
+// console.log("Answer: 18 were made by their sellers");
 
 // filter for an array of items made by seller 
 // who_made = i_did
@@ -229,12 +233,12 @@ console.log("Answer: 18 were made by their sellers");
 var selfMadeItems = items.filter(function(item) {
   return item.who_made != "someone_else" && item.who_made != "collective";
 });
-console.log(selfMadeItems);
-console.log(selfMadeItems.length);
+// console.log(selfMadeItems);
+// console.log(selfMadeItems.length);
 
 // display as a phrase
 var str= selfMadeItems.length + ' were made by their sellers';
-console.log(str);
+// console.log(str);
 
 // make it show up on the page (querySel#, createTextNode, appendChild)
   var answer6 = document.querySelector('#answer6');

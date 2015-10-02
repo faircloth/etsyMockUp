@@ -1,0 +1,13 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  color: #565555; }
+
+nav p {
+  padding-left: 15px;
+  margin-bottom: 5px; }
+
+.banner img {
+  height: 80px;
+  width: 100%; }

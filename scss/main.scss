@@ -1,0 +1,23 @@
+// put variables and style blocks here
+
+$textColor: #565555;
+$backgroundColor: #dfdbdb;
+
+
+.container {
+  width: 600px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  color: $textColor;
+}
+
+nav p {
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.banner img {
+  height: 80px;
+  width: 100%;
+}
+
