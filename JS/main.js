@@ -93,17 +93,39 @@
   // console.log(titles);
   
 
-  // split and join into one long string
-  var str = '' + titles + '';
-  var stringOfThree = str.split(',').join(' ');
-  // console.log(stringOfThree);
+  // shift off the first item one at a time to feed the list items
 
-  // make it show up on the page (querySel#, createTextNode, appendChild)
-  var answer2 = document.querySelector('#answer2');
-  var textNode = document.createTextNode(stringOfThree);
-  answer2.appendChild(textNode);
+  var firstItem = titles.shift (function (item) {
+    return item.title;
+  });
+  // console.log (firstItem);
+  // console.log (titles);
+
+  var secondItem = titles.shift (function (item) {
+    return item.title;
+  });
+  // console.log (secondItem);
+  // console.log (titles);
+
+  var thirdItem = titles.shift (function (item) {
+    return item.title;
+  });
+  // console.log (thirdItem);
+  // console.log (titles);  
 
 
+  // convert to a list
+  var answer2item1 = document.querySelector('#itemOneOfThree');
+  var textNode = document.createTextNode(firstItem);
+  answer2item1.appendChild(textNode);
+
+  var answer2item2 = document.querySelector('#itemTwoOfThree');
+  var textNode = document.createTextNode(secondItem);
+  answer2item2.appendChild(textNode);
+
+  var answer2item3 = document.querySelector('#itemThreeOfThree');
+  var textNode = document.createTextNode(thirdItem);
+  answer2item3.appendChild(textNode);
 
 
 
@@ -135,12 +157,12 @@
   
 // COME BACK TO THIS FOR THE BRITISH POUND SITUATION
 
-  var poundSign = document.write('&#163');
+  // var poundSign = document.write('&#163');
   // console.log(poundSign);
   // console.log('&#163');
 
   // convert into a string of text
-  var str = '' + poundItem + ' costs ' + poundSign + ' 18';
+  var str = '' + poundItem + ' costs ' + 'poundSign' + ' 18';
   // console.log(str);
 
 
@@ -169,20 +191,65 @@
   var woodItemTitles = woodItems.map (function (item) {
     return item.title;
   });
-  // console.log(woodItemTitles);
+  console.log(woodItemTitles);
 
-  // convert this array of titles to a text string
-  var str = '' + woodItemTitles;
-  // console.log(str);
 
-  // split the text string at the commas
-  var listOfWoodItems = str.split(',').join(' is made of wood. ');
-  // console.log(listOfWoodItems);
+
+
+
+
+  // convert the array to a list of items
+  var q4FirstItem = woodItemTitles.shift (function (item) {
+    return item.title;
+  });
+
+  var q4SecondItem = woodItemTitles.shift (function (item) {
+    return item.title;
+  });
+
+  var q4ThirdItem = woodItemTitles.shift (function (item) {
+    return item.title;
+  });
+
+  var q4FourthItem = woodItemTitles.shift (function (item) {
+    return item.title;
+  });
+
+  var q4FifthItem = woodItemTitles.shift (function (item) {
+    return item.title;
+  });
+
+
+
+
+
+
+  // show on the screen
+  var answer4item1 = document.querySelector('#item_q4_1of5');
+  var textNode = document.createTextNode(q4FirstItem);
+  answer4item1.appendChild(textNode);
+
+  var answer4item2 = document.querySelector('#item_q4_2of5');
+  var textNode = document.createTextNode(q4SecondItem);
+  answer4item2.appendChild(textNode);
+
+  var answer4item3 = document.querySelector('#item_q4_3of5');
+  var textNode = document.createTextNode(q4ThirdItem);
+  answer4item3.appendChild(textNode);
+
+  var answer4item4 = document.querySelector('#item_q4_4of5');
+  var textNode = document.createTextNode(q4FourthItem);
+  answer4item4.appendChild(textNode);
+
+  var answer4item5 = document.querySelector('#item_q4_5of5');
+  var textNode = document.createTextNode(q4FifthItem);
+  answer4item5.appendChild(textNode);
+
 
   // make it show up on the page (querySel#, createTextNode, appendChild)
-  var answer4 = document.querySelector('#answer4');
-  var textNode = document.createTextNode(listOfWoodItems);
-  answer4.appendChild(textNode);
+  // var answer4 = document.querySelector('#answer4');
+  // var textNode = document.createTextNode(listOfWoodItems);
+  // answer4.appendChild(textNode);
 
 
 
