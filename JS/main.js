@@ -128,19 +128,53 @@
 
 // QUESTION #4 SHOW ALL ITEMS MADE OF WOOD
 
+  // lesson learned - filte is return then a statement that if true, keeps the item
+
   // filter for items made of wood
   var woodItems = items.filter(function (item) {
     return item.materials.indexOf('wood') != -1;
   });
-  console.log(woodItems);
+  // console.log(woodItems);
 
   // mapping a new array which only includes item titles
   var woodItemTitles = woodItems.map (function (item) {
     return item.title;
   });
-  console.log(woodItemTitles);
+  // console.log(woodItemTitles);
 
-  // 
+  // convert this array of titles to a text string
+  var str = '' + woodItemTitles;
+  // console.log(str);
+
+  // split the text string at the commas
+  var listOfWoodItems = str.split(',').join(' is made of wood. ');
+  // console.log(listOfWoodItems);
+
+  // make it show up on the page (querySel#, createTextNode, appendChild)
+  var answer4 = document.querySelector('#answer4');
+  var textNode = document.createTextNode(listOfWoodItems);
+  answer4.appendChild(textNode);
+
+
+// QUESTION #5 SHOW ALL ITEMS MADE OF WOOD
+
+console.log("Which items are made of eight or more materials? Display the name, number of items and the items it is made of.");
+
+  // filter for iteam made of eight or more materials
+  var eightMaterialItems = items.filter(function (item) {
+    return item.materials.length >7;
+  });
+  console.log(eightMaterialItems);
+
+  // map to a new array that is only name, number of items and items included
+  var eightMaterialList = eightMaterialItems.map (function (item) {
+    return item.title + ' ' + item.materials.length + ' ' + item.materials;
+  });
+  console.log(eightMaterialList);
+
+  // convert this new array into a string of text
+  var str = '' + eightMaterialList;
+  console.log(str);
 
 
 })();
