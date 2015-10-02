@@ -103,7 +103,7 @@
   var poundItems = items.filter(function(item) {
     return item.currency_code != "USD";
   });
-  console.log(poundItems);
+  // console.log(poundItems);
 
 
   // treat it like an array bc it is - make new array (map) with title only
@@ -128,7 +128,19 @@
 
 // QUESTION #4 SHOW ALL ITEMS MADE OF WOOD
 
+  // filter for items made of wood
+  var woodItems = items.filter(function (item) {
+    return item.materials.indexOf('wood') != -1;
+  });
+  console.log(woodItems);
 
+  // mapping a new array which only includes item titles
+  var woodItemTitles = woodItems.map (function (item) {
+    return item.title;
+  });
+  console.log(woodItemTitles);
+
+  // 
 
 
 })();
