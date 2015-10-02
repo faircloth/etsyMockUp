@@ -2,7 +2,7 @@
 
 $textColor: #565555;
 $backgroundColor: #dfdbdb;
-$answerNumberTopMargin: 15px;
+$answerNumberTopMargin: 12px;
 
 
 .container {
@@ -10,9 +10,11 @@ $answerNumberTopMargin: 15px;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
   color: $textColor;
-  font-size: 16px;
+  font-size: 14px;
   background-color: $backgroundColor;
+  line-height: 24px;
 }
+
 
 .banner {
 }
@@ -29,11 +31,17 @@ $answerNumberTopMargin: 15px;
 p {
     text-align: center;
     margin-top: 5px; 
-}
+    padding: 5px 20px;
+  }
+    
     .answerNumber {
     font-size: 1.4em;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
     margin-bottom: 2px;
     margin-top: $answerNumberTopMargin;
+    padding: 0 10px;
     }
 
     nav p {
@@ -44,4 +52,11 @@ p {
     margin: 0;
     }
 
-
+.answerLine {
+    border-top: 1px solid $textColor;
+    width: 240px;
+    display: inline-block;
+    height: 5px;
+    padding: 0 2px;
+    margin: 0;
+    }

@@ -3,8 +3,9 @@
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
   color: #565555;
-  font-size: 16px;
-  background-color: #dfdbdb; }
+  font-size: 14px;
+  background-color: #dfdbdb;
+  line-height: 24px; }
 
 img {
   height: 80px;
@@ -15,16 +16,29 @@ img {
 
 p {
   text-align: center;
-  margin-top: 5px; }
+  margin-top: 5px;
+  padding: 5px 20px; }
 
 .answerNumber {
   font-size: 1.4em;
+  display: inline-block;
+  margin: 0 auto;
+  text-align: center;
   margin-bottom: 2px;
-  margin-top: 15px; }
+  margin-top: 12px;
+  padding: 0 10px; }
 
 nav p {
   padding-left: 15px;
   padding-bottom: 3px;
   text-align: left;
   background-color: white;
+  margin: 0; }
+
+.answerLine {
+  border-top: 1px solid #565555;
+  width: 240px;
+  display: inline-block;
+  height: 5px;
+  padding: 0 2px;
   margin: 0; }
