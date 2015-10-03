@@ -280,21 +280,19 @@
   var stringOne = materialItemOne.split('*');
   // console.log(stringOne);
 
-
-
   var materialFirstItem = stringOne.shift(function (item) {
     return item.title;
   });
-  console.log(materialFirstItem);
+  // console.log(materialFirstItem);
   // console.log(stringOne);
 
   var materialOfItemOne = stringOne.shift(function (item) {
     return item.title;
   });
-  console.log(materialOfItemOne);
+  // console.log(materialOfItemOne);
 
   var stringofMaterialsItem1 = materialOfItemOne.split(',');
-  console.log(stringofMaterialsItem1);
+  // console.log(stringofMaterialsItem1);
 
   var materialOneItemOne = stringofMaterialsItem1.shift(function (item) {
     return item.title;});
@@ -356,18 +354,113 @@
   var textNode = document.createTextNode(materialNineItemOne);
   materialItem1_q5_9of9.appendChild(textNode);
 
-
-
 // ****************
-
-
 
   var materialItemTwo = eightMaterialList.shift(function (item) {
     return item.title;
   });
   // console.log(materialItemTwo);
 
+  var stringTwo = materialItemTwo.split('*');
+  // console.log(stringTwo);
 
+
+   var materialSecondItem = stringTwo.shift(function (item) {
+    return item.title;
+  });
+
+  var materialOfItemTwo = stringTwo.shift(function (item) {
+    return item.title;
+  });
+
+  var stringofMaterialsItem2 = materialOfItemTwo.split(',');
+
+  var materialOneItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  // console.log(materialOneItemTwo);
+  var materialTwoItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialThreeItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialFourItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialFiveItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialSixItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialSevenItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialEightItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialNineItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialTenItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialElevenItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialTwelveItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+  var materialThirteenItemTwo = stringofMaterialsItem2.shift(function (item) {
+    return item.title;});
+
+
+  // ********
+
+  var answer5item2 = document.querySelector('#answer5item2');
+  var textNode = document.createTextNode(materialSecondItem);
+  answer5item2.appendChild(textNode);
+
+  var materialItem2_q5_1of13 = document.querySelector('#materialItem2_q5_1of13');
+  var textNode = document.createTextNode(materialOneItemTwo);
+  materialItem2_q5_1of13.appendChild(textNode);
+
+  var materialItem2_q5_2of13 = document.querySelector('#materialItem2_q5_2of13');
+  var textNode = document.createTextNode(materialTwoItemTwo);
+  materialItem2_q5_2of13.appendChild(textNode);
+
+  var materialItem2_q5_3of13 = document.querySelector('#materialItem2_q5_3of13');
+  var textNode = document.createTextNode(materialThreeItemTwo);
+  materialItem2_q5_3of13.appendChild(textNode);
+
+  var materialItem2_q5_4of13 = document.querySelector('#materialItem2_q5_4of13');
+  var textNode = document.createTextNode(materialFourItemTwo);
+  materialItem2_q5_4of13.appendChild(textNode);
+
+  var materialItem2_q5_5of13 = document.querySelector('#materialItem2_q5_5of13');
+  var textNode = document.createTextNode(materialFiveItemTwo);
+  materialItem2_q5_5of13.appendChild(textNode);
+
+  var materialItem2_q5_6of13 = document.querySelector('#materialItem2_q5_6of13');
+  var textNode = document.createTextNode(materialSixItemTwo);
+  materialItem2_q5_6of13.appendChild(textNode);
+
+  var materialItem2_q5_7of13 = document.querySelector('#materialItem2_q5_7of13');
+  var textNode = document.createTextNode(materialSevenItemTwo);
+  materialItem2_q5_7of13.appendChild(textNode);
+
+  var materialItem2_q5_8of13 = document.querySelector('#materialItem2_q5_8of13');
+  var textNode = document.createTextNode(materialEightItemTwo);
+  materialItem2_q5_8of13.appendChild(textNode);
+
+  var materialItem2_q5_9of13 = document.querySelector('#materialItem2_q5_9of13');
+  var textNode = document.createTextNode(materialNineItemTwo);
+  materialItem2_q5_9of13.appendChild(textNode);
+
+  var materialItem2_q5_10of13 = document.querySelector('#materialItem2_q5_10of13');
+  var textNode = document.createTextNode(materialTenItemTwo);
+  materialItem2_q5_10of13.appendChild(textNode);
+
+  var materialItem2_q5_11of13 = document.querySelector('#materialItem2_q5_11of13');
+  var textNode = document.createTextNode(materialElevenItemTwo);
+  materialItem2_q5_11of13.appendChild(textNode);
+
+  var materialItem2_q5_12of13 = document.querySelector('#materialItem2_q5_12of13');
+  var textNode = document.createTextNode(materialTwelveItemTwo);
+  materialItem2_q5_12of13.appendChild(textNode);
+
+  var materialItem2_q5_13of13 = document.querySelector('#materialItem2_q5_13of13');
+  var textNode = document.createTextNode(materialThirteenItemTwo);
+  materialItem2_q5_13of13.appendChild(textNode);
 
   
 
