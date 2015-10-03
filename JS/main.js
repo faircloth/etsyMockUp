@@ -162,7 +162,7 @@
   // console.log('&#163');
 
   // convert into a string of text
-  var str = '' + poundItem + ' costs ' + 'poundSign' + ' 18';
+  var str = '' + poundItem;
   // console.log(str);
 
 
@@ -191,7 +191,7 @@
   var woodItemTitles = woodItems.map (function (item) {
     return item.title;
   });
-  console.log(woodItemTitles);
+  // console.log(woodItemTitles);
 
 
 
@@ -226,23 +226,23 @@
 
   // show on the screen
   var answer4item1 = document.querySelector('#item_q4_1of5');
-  var textNode = document.createTextNode(q4FirstItem);
+  var textNode = document.createTextNode(q4FirstItem + ' is made of wood.');
   answer4item1.appendChild(textNode);
 
   var answer4item2 = document.querySelector('#item_q4_2of5');
-  var textNode = document.createTextNode(q4SecondItem);
+  var textNode = document.createTextNode(q4SecondItem + ' is made of wood.');
   answer4item2.appendChild(textNode);
 
   var answer4item3 = document.querySelector('#item_q4_3of5');
-  var textNode = document.createTextNode(q4ThirdItem);
+  var textNode = document.createTextNode(q4ThirdItem + ' is made of wood.');
   answer4item3.appendChild(textNode);
 
   var answer4item4 = document.querySelector('#item_q4_4of5');
-  var textNode = document.createTextNode(q4FourthItem);
+  var textNode = document.createTextNode(q4FourthItem + ' is made of wood.');
   answer4item4.appendChild(textNode);
 
   var answer4item5 = document.querySelector('#item_q4_5of5');
-  var textNode = document.createTextNode(q4FifthItem);
+  var textNode = document.createTextNode(q4FifthItem + ' is made of wood.');
   answer4item5.appendChild(textNode);
 
 
@@ -268,19 +268,108 @@
 
   // map to a new array that is only name, number of items and items included
   var eightMaterialList = eightMaterialItems.map (function (item) {
-    return item.title + ' ' + item.materials.length + ' ' + item.materials;
+    return item.title + ' has ' + item.materials.length + ' materials:' + '*' + item.materials;
   });
   // console.log(eightMaterialList);
 
-  // convert this new array into a string of text
-  var str = eightMaterialList + '';
-  var stringOfEightMaterialItems = str.split(',').join(' ');
-  // console.log(stringOfEightMaterialItems);
+  var materialItemOne = eightMaterialList.shift(function (item) {
+    return item.title;
+  });
+  // console.log(materialItemOne);
 
-  // make it show up on the page (querySel#, createTextNode, appendChild)
-  var answer5 = document.querySelector('#answer5');
-  var textNode = document.createTextNode(stringOfEightMaterialItems);
-  answer5.appendChild(textNode);
+  var stringOne = materialItemOne.split('*');
+  // console.log(stringOne);
+
+
+
+  var materialFirstItem = stringOne.shift(function (item) {
+    return item.title;
+  });
+  console.log(materialFirstItem);
+  // console.log(stringOne);
+
+  var materialOfItemOne = stringOne.shift(function (item) {
+    return item.title;
+  });
+  console.log(materialOfItemOne);
+
+  var stringofMaterialsItem1 = materialOfItemOne.split(',');
+  console.log(stringofMaterialsItem1);
+
+  var materialOneItemOne = stringofMaterialsItem1.shift(function (item) {
+    return item.title;});
+  var materialTwoItemOne = stringofMaterialsItem1.shift(function (item) {
+    return item.title;});
+  var materialThreeItemOne = stringofMaterialsItem1.shift(function (item) {
+    return item.title;});
+  var materialFourItemOne = stringofMaterialsItem1.shift(function (item) {
+    return item.title;});
+  var materialFiveItemOne = stringofMaterialsItem1.shift(function (item) {
+    return item.title;});
+  var materialSixItemOne = stringofMaterialsItem1.shift(function (item) {
+    return item.title;});
+  var materialSevenItemOne = stringofMaterialsItem1.shift(function (item) {
+    return item.title;});
+  var materialEightItemOne = stringofMaterialsItem1.shift(function (item) {
+    return item.title;});
+  var materialNineItemOne = stringofMaterialsItem1.shift(function (item) {
+    return item.title;});
+
+// make it show up on the page (querySel#, createTextNode, appendChild)
+  var answer5item1 = document.querySelector('#answer5item1');
+  var textNode = document.createTextNode(materialFirstItem);
+  answer5item1.appendChild(textNode);
+
+  var materialItem1_q5_1of9 = document.querySelector('#materialItem1_q5_1of9');
+  var textNode = document.createTextNode(materialOneItemOne);
+  materialItem1_q5_1of9.appendChild(textNode);
+
+  var materialItem1_q5_2of9 = document.querySelector('#materialItem1_q5_2of9');
+  var textNode = document.createTextNode(materialTwoItemOne);
+  materialItem1_q5_2of9.appendChild(textNode);
+
+  var materialItem1_q5_3of9 = document.querySelector('#materialItem1_q5_3of9');
+  var textNode = document.createTextNode(materialThreeItemOne);
+  materialItem1_q5_3of9.appendChild(textNode);
+
+  var materialItem1_q5_4of9 = document.querySelector('#materialItem1_q5_4of9');
+  var textNode = document.createTextNode(materialFourItemOne);
+  materialItem1_q5_4of9.appendChild(textNode);
+
+  var materialItem1_q5_5of9 = document.querySelector('#materialItem1_q5_5of9');
+  var textNode = document.createTextNode(materialFiveItemOne);
+  materialItem1_q5_5of9.appendChild(textNode);
+
+  var materialItem1_q5_6of9 = document.querySelector('#materialItem1_q5_6of9');
+  var textNode = document.createTextNode(materialSixItemOne);
+  materialItem1_q5_6of9.appendChild(textNode);
+
+  var materialItem1_q5_7of9 = document.querySelector('#materialItem1_q5_7of9');
+  var textNode = document.createTextNode(materialSevenItemOne);
+  materialItem1_q5_7of9.appendChild(textNode);
+
+  var materialItem1_q5_8of9 = document.querySelector('#materialItem1_q5_8of9');
+  var textNode = document.createTextNode(materialEightItemOne);
+  materialItem1_q5_8of9.appendChild(textNode);
+
+  var materialItem1_q5_9of9 = document.querySelector('#materialItem1_q5_9of9');
+  var textNode = document.createTextNode(materialNineItemOne);
+  materialItem1_q5_9of9.appendChild(textNode);
+
+
+
+// ****************
+
+
+
+  var materialItemTwo = eightMaterialList.shift(function (item) {
+    return item.title;
+  });
+  // console.log(materialItemTwo);
+
+
+
+  
 
 
 

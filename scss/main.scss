@@ -29,9 +29,22 @@ $answerNumberTopMargin: 12px;
 
 ol {
   text-align: left;
-  margin-top: 5px; 
+  margin: 5px 0 5px 0; 
   padding: 5px 20px;
   list-style-position: inside;
+}
+
+
+.costsPounds {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.answer3 {
+  display: inline-block;
+  padding: 5px 0 5px 120px;
+  margin: 5px 0;
 }
 
 
